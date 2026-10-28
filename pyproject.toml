@@ -1,0 +1,27 @@
+[project]
+name = "glueup-tools"
+version = "0.2.0"
+description = "Python client and command-line tool for the Glue Up open API v2"
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "IPTC", email = "office@iptc.org" }]
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.32",
+    "python-dotenv>=1.0",
+    "typer>=0.15",
+    "rich>=13.7",
+]
+
+[project.urls]
+Homepage = "https://github.com/iptc/glueup-tools"
+
+[project.scripts]
+glueup = "glueup.cli:app"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["glueup*"]
